@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Greta | Shopify Store Assistant</title>
 
-  <!-- =========================
-       Google Fonts
-  ========================== -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -60,6 +58,11 @@
       text-decoration:none;
     }
 
+    img{
+      max-width:100%;
+      display:block;
+    }
+
     /* =========================
        Navigation
     ========================== */
@@ -83,7 +86,7 @@
     }
 
     .logo{
-      font-size:1.5rem;
+      font-size:1.6rem;
       font-weight:700;
       color:#0f172a;
     }
@@ -126,7 +129,7 @@
     .hero-content{
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:60px;
+      gap:70px;
       align-items:center;
     }
 
@@ -140,7 +143,7 @@
     .hero-text p{
       font-size:1.1rem;
       margin-bottom:35px;
-      max-width:540px;
+      max-width:550px;
     }
 
     .hero-btn{
@@ -161,8 +164,15 @@
 
     .hero-image img{
       width:100%;
-      border-radius:28px;
-      box-shadow:0 25px 60px rgba(0,0,0,0.1);
+      height:620px;
+      object-fit:cover;
+      border-radius:32px;
+      box-shadow:0 25px 60px rgba(0,0,0,0.12);
+      transition:0.4s ease;
+    }
+
+    .hero-image img:hover{
+      transform:translateY(-6px) scale(1.01);
     }
 
     /* =========================
@@ -179,24 +189,33 @@
     }
 
     .section-title h2{
-      font-size:2.7rem;
+      font-size:2.8rem;
       margin-bottom:15px;
     }
 
     .about-content{
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:60px;
+      gap:70px;
       align-items:center;
     }
 
     .about-image img{
       width:100%;
-      border-radius:24px;
+      height:560px;
+      object-fit:cover;
+      border-radius:32px;
+      box-shadow:0 25px 60px rgba(0,0,0,0.10);
+      transition:0.4s ease;
+    }
+
+    .about-image img:hover{
+      transform:translateY(-6px);
     }
 
     .about-text p{
-      margin-bottom:20px;
+      margin-bottom:22px;
+      font-size:1.02rem;
     }
 
     /* =========================
@@ -215,9 +234,9 @@
 
     .feature-card{
       background:white;
-      padding:40px 30px;
-      border-radius:24px;
-      transition:0.3s ease;
+      padding:40px 32px;
+      border-radius:28px;
+      transition:0.35s ease;
       box-shadow:0 10px 30px rgba(0,0,0,0.05);
     }
 
@@ -227,12 +246,13 @@
     }
 
     .feature-icon{
-      font-size:2rem;
-      margin-bottom:20px;
+      font-size:2.3rem;
+      margin-bottom:22px;
     }
 
     .feature-card h3{
       margin-bottom:15px;
+      font-size:1.3rem;
       color:#0f172a;
     }
 
@@ -252,25 +272,27 @@
       #9333ea
       );
 
-      border-radius:32px;
-      padding:70px 50px;
+      padding:80px 50px;
+      border-radius:36px;
       text-align:center;
       color:white;
+      box-shadow:0 20px 50px rgba(124,58,237,0.25);
     }
 
     .contact-box h2{
-      font-size:2.7rem;
+      font-size:2.8rem;
       margin-bottom:20px;
     }
 
     .contact-box p{
       color:rgba(255,255,255,0.9);
       margin-bottom:35px;
+      font-size:1.05rem;
     }
 
     .contact-btn{
       display:inline-block;
-      padding:16px 32px;
+      padding:16px 34px;
       background:white;
       color:#7c3aed;
       border-radius:14px;
@@ -291,14 +313,14 @@
       background:#0f172a;
       color:white;
       text-align:center;
-      padding:30px 0;
+      padding:35px 0;
     }
 
     /* =========================
        Responsive Design
     ========================== */
 
-    @media(max-width:900px){
+    @media(max-width:950px){
 
       .hero-content,
       .about-content,
@@ -322,9 +344,18 @@
         display:none;
       }
 
+      .hero-image img,
+      .about-image img{
+        height:auto;
+      }
+
     }
 
     @media(max-width:600px){
+
+      section{
+        padding:80px 0;
+      }
 
       .hero-text h1{
         font-size:2.3rem;
@@ -343,6 +374,7 @@
 
   </style>
 </head>
+
 <body>
 
   <!-- =========================
@@ -350,6 +382,7 @@
   ========================== -->
 
   <nav>
+
     <div class="container nav-wrapper">
 
       <div class="logo">
@@ -363,6 +396,7 @@
       </div>
 
     </div>
+
   </nav>
 
   <!-- =========================
@@ -391,9 +425,11 @@
 
       </div>
 
+      <!-- Hero Image -->
+
       <div class="hero-image">
 
-        <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop" alt="Shopify Assistant">
+        <img src="photo_5240083405519659434_y.jpg" alt="Greta Shopify Assistant">
 
       </div>
 
@@ -421,30 +457,34 @@
 
       <div class="about-content">
 
+        <!-- About Image -->
+
         <div class="about-image">
 
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="About Greta">
+          <img src="photo_5240083405519659435_y.jpg" alt="About Greta">
 
         </div>
+
+        <!-- About Text -->
 
         <div class="about-text">
 
           <p>
-            I’ve worked directly with customers in retail and banking for years,
-            building strong communication skills and understanding what makes
-            customers trust a brand.
+            Years of working directly with customers in retail and banking
+            taught me how important communication, trust, and organization are
+            for every successful business.
           </p>
 
           <p>
-            My experience at ELF Cosmetics, Bershka, Fresh Line, and Evocabank
-            helped me develop attention to detail, organization, and fast
-            problem-solving skills that are valuable for Shopify stores.
+            I worked at ELF Cosmetics, Bershka, and Fresh Line before becoming
+            a Customer Service Hall Supervisor at Evocabank — where I handled
+            operations, customer experience, and fast decision-making daily.
           </p>
 
           <p>
-            I help eCommerce businesses with product listing, store admin,
-            catalog organization, order tracking, and customer support while
-            keeping everything professional and organized.
+            Today, I help Shopify store owners manage product listings,
+            catalog organization, order tracking, content updates,
+            and customer support with professionalism and attention to detail.
           </p>
 
         </div>
@@ -475,6 +515,8 @@
 
       <div class="feature-grid">
 
+        <!-- Feature Card -->
+
         <div class="feature-card">
 
           <div class="feature-icon">🛍️</div>
@@ -482,11 +524,13 @@
           <h3>Product Listing</h3>
 
           <p>
-            Organized and attractive Shopify product uploads with attention
-            to details and customer presentation.
+            Organized and visually attractive Shopify product uploads with
+            attention to customer experience and presentation.
           </p>
 
         </div>
+
+        <!-- Feature Card -->
 
         <div class="feature-card">
 
@@ -496,10 +540,12 @@
 
           <p>
             Friendly and professional communication that helps customers
-            feel valued and supported.
+            feel valued and supported throughout their experience.
           </p>
 
         </div>
+
+        <!-- Feature Card -->
 
         <div class="feature-card">
 
